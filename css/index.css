@@ -1,0 +1,101 @@
+.home-section {
+  padding: 100px;
+  padding-inline: clamp(
+    60px,
+    calc(60px + (100 - 60) * ((100vw - 768px) / (1440 - 768))),
+    100px
+  );
+  margin-top: 20px;
+  background-image: url(../assets/images/img-hero.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  gap: 40px;
+}
+
+.home-heading {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 105%;
+  letter-spacing: 0;
+  color: var(--text-inverse);
+}
+
+.text-accent {
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.home-description {
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--text-inverse);
+}
+
+.home-link {
+  line-height: 150%;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 1.25rem;
+  background-color: var(--bgc-page);
+  max-width: 160px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.home-link-text {
+  position: relative;
+}
+
+.home-link-text::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: -8px;
+  transform: translate(100%, -50%);
+  background: url(../assets/images/icons/coffee-cup.svg) no-repeat center /
+    cover;
+  transition: opacity 0.3s;
+}
+
+/* Media */
+
+@media (hover: hover) and (pointer: fine) {
+  .home-link:hover .home-link-text::after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: clamp(
+        60px,
+        calc(60px + (100 - 60) * ((100vw - 380px) / (768 - 380))),
+        100px
+      )
+      clamp(
+        16px,
+        calc(16px + (60 - 16) * ((100vw - 380px) / (768 - 380))),
+        60px
+      );
+  }
+  .home-heading {
+    line-height: 115%;
+    font-size: clamp(
+      2.625rem,
+      calc(2.625rem + (4.5 - 2.625) * ((100vw - 380px) / (768 - 380))),
+      4.5rem
+    );
+  }
+}
