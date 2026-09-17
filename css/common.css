@@ -48,6 +48,14 @@ img {
   src: url("../assets/fonts/inter-v20-latin-600.woff2") format("woff2");
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../assets/fonts/inter-v20-latin-600italic.woff2") format("woff2");
+}
+
 :root {
   --text-primary: #403f3d;
   --text-inverse: #e1d4c9;
@@ -81,6 +89,7 @@ img {
 body {
   font-family: "Inter", sans-serif;
   font-size: var(--fs-basic);
+  color: var(--text-primary);
 }
 
 .bgc-wrapper {

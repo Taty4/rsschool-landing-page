@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee House</title>
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -139,6 +140,73 @@
             <a class="home-link" href="#"
               ><span class="home-link-text">Menu</span></a
             >
+          </div>
+        </section>
+        <section class="favorite-section">
+          <h2 class="title-section">
+            Choose your <span class="text-accent">favorite</span> coffee
+          </h2>
+          <div class="slider-container">
+            <button class="slider-button slider-button-left">
+              <svg
+                viewBox="0 0 13.5 13.004"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="13.500000"
+                height="13.004028"
+                fill="none"
+                customFrame="#000000"
+              >
+                <path
+                  id="Vector"
+                  d="M13 6.50201L0.5 6.50201M6.5 12.502L0.5 6.50201L6.5 0.502014"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.000000"
+                />
+              </svg>
+            </button>
+            <div class="slide">
+              <div class="slide-image">
+                <img
+                  src="./assets/images/slider/coffee-slider-1.webp"
+                  alt="Image of frappuccino"
+                />
+              </div>
+              <div class="slide-description">
+                <h3 class="coffee-title">S’mores Frappuccino</h3>
+                <p class="coffee-description">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <p class="coffee-price">$5.50</p>
+              </div>
+            </div>
+            <button class="slider-button slider-button-right">
+              <svg
+                viewBox="0 0 13.5 13.004"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="13.500000"
+                height="13.004028"
+                fill="none"
+                customFrame="#000000"
+              >
+                <path
+                  id="Vector"
+                  d="M12.5 6L0 6M6 12L0 6L6 0"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.000000"
+                  transform="matrix(-1,0,0,1,13,0.502014)"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bullets-container">
+            <span class="bullet active"></span>
+            <span class="bullet"></span>
+            <span class="bullet"></span>
           </div>
         </section>
       </main>

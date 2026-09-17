@@ -69,11 +69,118 @@
   transition: opacity 0.3s;
 }
 
+/* Favorite section */
+
+.favorite-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  .title-section {
+    text-align: center;
+  }
+}
+
+.title-section {
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slide-image {
+  max-width: 480px;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--border-inverse);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  svg {
+    stroke: var(--text-primary);
+    transition: stroke 0.3s;
+  }
+}
+
+.coffee-title,
+.coffee-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0%;
+}
+
+.coffee-description {
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.slide-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  align-items: center;
+
+  .coffee-description {
+    text-align: center;
+  }
+}
+
+.bullets-container {
+  display: flex;
+  gap: 15px;
+}
+
+.bullet {
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: var(--border-primary);
+  border-radius: 100px;
+
+  &.active {
+    background-color: var(--border-inverse);
+  }
+}
+
 /* Media */
 
 @media (hover: hover) and (pointer: fine) {
   .home-link:hover .home-link-text::after {
     opacity: 1;
+  }
+
+  .slider-button:hover {
+    background-color: var(--border-inverse);
+
+    svg {
+      stroke: var(--text-inverse);
+    }
   }
 }
 
@@ -90,6 +197,7 @@
         60px
       );
   }
+
   .home-heading {
     line-height: 115%;
     font-size: clamp(
@@ -97,5 +205,19 @@
       calc(2.625rem + (4.5 - 2.625) * ((100vw - 380px) / (768 - 380))),
       4.5rem
     );
+  }
+
+  .title-section {
+    font-size: clamp(
+      2rem,
+      calc(2rem + (3.75 - 2) * ((100vw - 380px) / (768 - 380))),
+      3.75rem
+    );
+  }
+}
+
+@media (max-width: 535px) {
+  .slider-button {
+    display: none;
   }
 }
