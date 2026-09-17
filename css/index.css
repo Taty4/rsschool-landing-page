@@ -134,7 +134,8 @@
   letter-spacing: 0%;
 }
 
-.coffee-description {
+.coffee-description,
+.apps-descriptions {
   line-height: 150%;
   letter-spacing: 0;
 }
@@ -221,6 +222,70 @@
   aspect-ratio: 660 / 430;
 }
 
+/* Section Mobile app */
+
+.section-apps {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apps-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 630px;
+}
+
+.apps-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.apps-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 12px 20px;
+  gap: 13px;
+  border: 1px solid var(--border-inverse);
+  border-radius: 100px;
+  max-width: 200px;
+  width: 100%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  svg {
+    fill: var(--text-primary);
+    transition: fill 0.3s;
+  }
+}
+
+.apps-button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.apps-button-available {
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.apps-button-name {
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
 /* Media */
 
 @media (hover: hover) and (pointer: fine) {
@@ -233,6 +298,18 @@
 
     svg {
       stroke: var(--text-inverse);
+    }
+  }
+
+  .apps-button:hover {
+    background-color: var(--bgc-container);
+
+    .apps-button-available,
+    .apps-button-name {
+      color: var(--text-inverse);
+    }
+    svg {
+      fill: var(--text-inverse);
     }
   }
 }
@@ -284,10 +361,21 @@
     height: 590px;
     aspect-ratio: auto;
   }
+
+  .section-apps {
+    flex-direction: column;
+    gap: 100px;
+  }
 }
 
 @media (max-width: 535px) {
   .slider-button {
     display: none;
+  }
+}
+
+@media (max-width: 485px) {
+  .apps-buttons {
+    flex-direction: column;
   }
 }
