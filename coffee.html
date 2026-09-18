@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/coffee.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+
+    <script>
+      if (localStorage.getItem("theme-taty4-kcnThs7") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+
+    <script type="module" defer src="./assets/js/coffee.js"></script>
   </head>
   <body>
     <div class="bgc-wrapper">
@@ -33,8 +41,7 @@
               type="radio"
               name="theme"
               id="light-theme"
-              value="dark"
-              checked
+              value="light"
             />
             <label for="light-theme" class="label-light">
               <svg
@@ -88,17 +95,9 @@
               height="20.000000"
               fill="none"
             >
-              <rect
-                id="coffee-cup"
-                width="20.000000"
-                height="20.000000"
-                x="0.000000"
-                y="0.000000"
-              />
               <path
                 id="Vector"
                 d="M0 7.73333C0 8.0647 0.268629 8.33333 0.6 8.33333L11.0667 8.33333C11.398 8.33333 11.6667 8.0647 11.6667 7.73333L11.6667 5.83333C11.6667 2.61167 9.05499 0 5.83333 0C2.61167 0 0 2.61167 0 5.83333L0 7.73333Z"
-                stroke="rgb(64,63,61)"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.500000"
@@ -107,7 +106,6 @@
               <path
                 id="Vector 13"
                 d="M4.16667 4.58333C4.16667 3.75 3.57143 2.91667 2.38095 2.91667C1.06599 2.91667 0 1.85068 0 0.535714L0 0"
-                stroke="rgb(64,63,61)"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.500000"
@@ -116,7 +114,6 @@
               <path
                 id="Vector 14"
                 d="M4.16667 5L4.16667 4.58333C4.16667 3.20262 3.04738 2.08333 1.66667 2.08333C0.746192 2.08333 0 1.33714 0 0.416667L0 0"
-                stroke="rgb(64,63,61)"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.500000"
@@ -125,7 +122,6 @@
               <path
                 id="Vector"
                 d="M13.333 9.16675L15.4163 9.16675C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334L14.1663 13.3334"
-                stroke="rgb(64,63,61)"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.500000"

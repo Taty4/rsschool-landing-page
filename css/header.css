@@ -102,6 +102,10 @@ input[type="radio"] {
       width: 100%;
     }
   }
+
+  svg {
+    stroke: var(--text-primary);
+  }
 }
 
 .link-menu::after {

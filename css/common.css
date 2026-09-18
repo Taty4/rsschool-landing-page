@@ -73,7 +73,7 @@ img {
   --logo-url: url("../assets/images/logo/logo.png");
 }
 
-/* :root.dark {
+[data-theme="dark"] {
   --text-primary: #e1d4c9;
 
   --bgc-page: #292826;
@@ -83,10 +83,9 @@ img {
   --border-primary: #665f55;
   --border-inverse: #c1b6ad;
 
-    --logo-url: url("../assets/images/logo/logo-dark.png");
-} */
-
-html {
+  --logo-url: url("../assets/images/logo/logo-dark.png");
+}
+*/ html {
   scroll-behavior: smooth;
 }
 

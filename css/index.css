@@ -47,21 +47,17 @@
 
 .home-link-text {
   position: relative;
-}
 
-.home-link-text::after {
-  content: "";
-  display: block;
-  opacity: 0;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  right: -8px;
-  transform: translate(100%, -50%);
-  background: url(../assets/images/icons/coffee-cup.svg) no-repeat center /
-    cover;
-  transition: opacity 0.3s;
+  svg {
+    stroke: var(--text-primary);
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translate(100%, -50%);
+    transition: opacity 0.3s;
+  }
 }
 
 /* Favorite section */
@@ -106,7 +102,9 @@
   border-radius: 50%;
   border: 1px solid var(--border-inverse);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
 
   svg {
     stroke: var(--text-primary);
@@ -245,7 +243,9 @@
   border-radius: 100px;
   max-width: 200px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
   cursor: pointer;
 
   svg {
@@ -281,12 +281,13 @@
 /* Media */
 
 @media (hover: hover) and (pointer: fine) {
-  .home-link:hover .home-link-text::after {
+  .home-link:hover svg {
     opacity: 1;
   }
 
   .slider-button:hover {
-    background-color: var(--border-inverse);
+    background-color: var(--bgc-container);
+    border-color: var(--bgc-container);
 
     svg {
       stroke: var(--text-inverse);
@@ -295,6 +296,7 @@
 
   .apps-button:hover {
     background-color: var(--bgc-container);
+    border-color: var(--bgc-container);
 
     .apps-button-available,
     .apps-button-name {
