@@ -86,6 +86,10 @@ img {
     --logo-url: url("../assets/images/logo/logo-dark.png");
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: var(--fs-basic);

@@ -48,15 +48,6 @@
   }
 }
 
-.social-link-link:hover {
-  border-color: var(--bgc-page);
-  background-color: var(--bgc-page);
-
-  svg {
-    stroke: var(--text-primary);
-  }
-}
-
 .heading-contacts {
   font-size: 1.5rem;
   font-weight: 600;
@@ -93,8 +84,19 @@
   transition: width 0.3s;
 }
 
-.contacts-link:hover::after {
-  width: 100%;
+@media (hover: hover) and (pointer: fine) {
+  .contacts-link:hover::after {
+    width: 100%;
+  }
+
+  .social-link-link:hover {
+    border-color: var(--bgc-page);
+    background-color: var(--bgc-page);
+
+    svg {
+      stroke: var(--text-primary);
+    }
+  }
 }
 
 @media (max-width: 768px) {

@@ -7,6 +7,7 @@
 }
 
 .header-logo {
+  display: block;
   flex-shrink: 0;
   width: 100px;
   height: 60px;
@@ -28,6 +29,7 @@
   font-weight: 600;
   line-height: 150%;
   letter-spacing: 0%;
+  transition: color 0.3s;
 }
 
 .header-actions {
@@ -145,6 +147,10 @@ input[type="radio"] {
 /* Media */
 
 @media (hover: hover) and (pointer: fine) {
+  .nav-item a:hover {
+    color: var(--border-inverse);
+  }
+
   .label-light:hover,
   .label-dark:hover {
     background-color: var(--border-inverse);
