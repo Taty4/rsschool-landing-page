@@ -85,21 +85,19 @@ img {
 
   --logo-url: url("../assets/images/logo/logo-dark.png");
 }
-*/ html {
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: var(--fs-basic);
-  color: var(--text-primary);
-}
-
-.bgc-wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 20px 40px 40px;
   background-color: var(--bgc-page);
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-basic);
+  color: var(--text-primary);
 }
 
 .title-section {
@@ -115,7 +113,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .bgc-wrapper {
+  .body {
     padding-inline: clamp(
       16px,
       calc(16px + (40 - 16) * ((100vw - 380px) / (768 - 380))),
