@@ -28,11 +28,6 @@
   color: var(--text-inverse);
 }
 
-.text-accent {
-  font-style: italic;
-  color: var(--text-accent);
-}
-
 .home-description {
   line-height: 150%;
   letter-spacing: 0;
@@ -81,13 +76,6 @@
   .title-section {
     text-align: center;
   }
-}
-
-.title-section {
-  font-size: 3.75rem;
-  font-weight: 600;
-  line-height: 125%;
-  letter-spacing: 0;
 }
 
 .slider-container {
@@ -337,14 +325,6 @@
       42px,
       calc(42px + (72 - 42) * ((100vw - 380px) / (768 - 380))),
       72px
-    );
-  }
-
-  .title-section {
-    font-size: clamp(
-      32px,
-      calc(32px + (60 - 32) * ((100vw - 380px) / (768 - 380))),
-      60px
     );
   }
 
