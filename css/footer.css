@@ -47,9 +47,24 @@
     border-color 0.3s,
     background-color 0.3s;
 
-  svg {
+  .icon {
     stroke: var(--text-inverse);
     transition: 0.3s;
+  }
+
+  .icon-twitter {
+    width: 23px;
+    height: 20px;
+  }
+
+  .icon-instagram {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-facebook {
+    width: 12px;
+    height: 21px;
   }
 }
 
@@ -76,6 +91,12 @@
   font-weight: 600;
   line-height: 150%;
   letter-spacing: 0;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-inverse);
+  }
 }
 
 .contacts-link::after {
@@ -98,7 +119,7 @@
     border-color: var(--bgc-page);
     background-color: var(--bgc-page);
 
-    svg {
+    .icon {
       stroke: var(--text-primary);
     }
   }
@@ -132,5 +153,17 @@
       calc(40px + (100 - 40) * ((100vw - 380px) / (768 - 380))),
       100px
     );
+
+    .title-section {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .footer {
+    .title-section {
+      max-width: 300px;
+    }
   }
 }

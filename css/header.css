@@ -1,3 +1,9 @@
+@property --color-theme {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #403f3d;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -64,8 +70,8 @@ input[type="radio"] {
 .input-header:checked + label {
   background-color: var(--text-accent);
 
-  svg {
-    fill: var(--text-inverse);
+  .icon {
+    --color-theme: var(--text-inverse); /*    fill: var(--text-inverse); */
   }
 }
 
@@ -80,10 +86,18 @@ input[type="radio"] {
   cursor: pointer;
   transition: background-color 0.3s;
 
-  svg {
-    fill: var(--text-primary);
-    transition: fill 0.3s;
+  .icon {
+    width: 22px;
+    height: 22px;
+    /*     fill: var(--text-primary); */
+    --color-theme: var(--text-primary);
+    transition: --color-theme 0.3s;
   }
+}
+
+.label-dark .icon {
+  width: 18px;
+  height: 19px;
 }
 
 .link-menu {
@@ -103,8 +117,10 @@ input[type="radio"] {
     }
   }
 
-  svg {
-    stroke: var(--text-primary);
+  .icon {
+    width: 20px;
+    height: 20px;
+    --color-cup: var(--text-primary);
   }
 }
 
@@ -159,8 +175,9 @@ input[type="radio"] {
   .label-dark:hover {
     background-color: var(--border-inverse);
 
-    svg {
-      fill: var(--text-inverse);
+    .icon {
+      --color-theme: var(--text-inverse);
+      /*       fill: var(--text-inverse); */
     }
   }
 

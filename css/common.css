@@ -113,7 +113,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .body {
+  body {
     padding-inline: clamp(
       16px,
       calc(16px + (40 - 16) * ((100vw - 380px) / (768 - 380))),

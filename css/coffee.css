@@ -84,9 +84,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: stretch;
   max-width: 310px;
+  min-height: 506px;
   border: 1px solid var(--border-primary);
   border-radius: 40px;
   cursor: pointer;
@@ -122,7 +122,7 @@
   }
 
   .card-text {
-    line-height: 125%;
+    line-height: 150%;
     letter-spacing: 0;
   }
 }
@@ -137,7 +137,9 @@
   border-radius: 50%;
   border: 1px solid var(--border-inverse);
 
-  svg {
+  .icon {
+    width: 24px;
+    height: 24px;
     stroke: var(--text-primary);
   }
 }
