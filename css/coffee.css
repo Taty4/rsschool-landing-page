@@ -21,8 +21,6 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px 8px 8px;
-  width: 100%;
-  max-width: 115px;
   border-radius: 100px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -41,15 +39,15 @@
   }
 
   .icon-wrapper-coffee {
-    background-image: url("../assets/images/icons/coffe-icon.png");
+    background-image: url("../assets/images/icons/coffee-icon.webp");
   }
 
   .icon-wrapper-tea {
-    background-image: url("../assets/images/icons/tea-icon.png");
+    background-image: url("../assets/images/icons/tea-icon.webp");
   }
 
   .icon-wrapper-dessert {
-    background-image: url("../assets/images/icons/dessert-icon.png");
+    background-image: url("../assets/images/icons/dessert-icon.webp");
   }
 
   .switch-text {

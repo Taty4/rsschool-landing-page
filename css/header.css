@@ -71,7 +71,7 @@ input[type="radio"] {
   background-color: var(--text-accent);
 
   .icon {
-    --color-theme: var(--text-inverse); /*    fill: var(--text-inverse); */
+    --color-theme: var(--text-inverse);
   }
 }
 
@@ -177,7 +177,6 @@ input[type="radio"] {
 
     .icon {
       --color-theme: var(--text-inverse);
-      /*       fill: var(--text-inverse); */
     }
   }
 
@@ -201,7 +200,6 @@ input[type="radio"] {
   }
 
   /* Adaptive burger menu */
-
   .header-nav {
     display: none;
   }
