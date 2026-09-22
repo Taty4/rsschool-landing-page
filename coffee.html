@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/coffee.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <script>
+      if (localStorage.getItem("theme-taty4-kcnThs7") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+
+    <script type="module" src="./assets/js/coffee.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header-logo" href="./index.html"></a>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html#favorite-coffee">Favorite coffee</a>
+          </li>
+          <li class="nav-item"><a href="./index.html#about">About</a></li>
+          <li class="nav-item">
+            <a href="./index.html#mobile-apps">Mobile app</a>
+          </li>
+          <li class="nav-item"><a href="#footer">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="header-theme">
+          <input
+            class="input-header"
+            type="radio"
+            name="theme"
+            id="light-theme"
+            value="light"
+          />
+          <label for="light-theme" class="label-light">
+            <svg class="icon"><use href="./assets/sprite.svg#sun"></use></svg>
+          </label>
+          <input
+            class="input-header"
+            type="radio"
+            name="theme"
+            id="dark-theme"
+            value="dark"
+          />
+          <label for="dark-theme" class="label-dark">
+            <svg class="icon"><use href="./assets/sprite.svg#moon"></use></svg>
+          </label>
+        </div>
+        <a class="link-menu active" href="#"
+          >Menu
+          <svg class="icon">
+            <use href="./assets/sprite.svg#coffee-cup"></use>
+          </svg>
+        </a>
+        <button class="burger-button"></button>
+      </div>
+    </header>
+    <main>
+      <section class="menu">
+        <h1 class="title-section">
+          Behind each of our cups hides an
+          <span class="text-accent">amazing surprise</span>
+        </h1>
+        <div class="switch-block">
+          <input
+            class="input-coffee"
+            type="radio"
+            name="switch-item"
+            id="switch-coffee"
+            value="coffee"
+            checked
+          />
+          <label for="switch-coffee" class="switch-label switch-coffee">
+            <span class="icon-wrapper icon-wrapper-coffee"> </span>
+            <span class="switch-text">Coffee</span>
+          </label>
+          <input
+            class="input-coffee"
+            type="radio"
+            name="switch-item"
+            id="switch-tea"
+            value="tea"
+          />
+          <label for="switch-tea" class="switch-label switch-tea">
+            <span class="icon-wrapper icon-wrapper-tea"> </span>
+            <span class="switch-text">Tea</span>
+          </label>
+          <input
+            class="input-coffee"
+            type="radio"
+            name="switch-item"
+            id="switch-dessert"
+            value="dessert"
+          />
+          <label for="switch-dessert" class="switch-label switch-dessert">
+            <span class="icon-wrapper icon-wrapper-dessert"> </span>
+            <span class="switch-text">Dessert</span></label
+          >
+        </div>
+        <div class="container-cards"></div>
+        <button class="button-refresh">
+          <svg class="icon icon-twitter">
+            <use href="./assets/sprite.svg#refresh"></use>
+          </svg>
+        </button>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer-offer">
+        <h2 class="title-section">
+          Sip, Savor, Smile.
+          <span class="text-accent">It’s coffee time!</span>
+        </h2>
+        <ul class="social-link-list">
+          <li class="social-link-item">
+            <a class="social-link-link" href="#"
+              ><svg class="icon icon-twitter">
+                <use href="./assets/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link-link" href="#">
+              <svg class="icon icon-instagram">
+                <use href="./assets/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link-item">
+            <a class="social-link-link" href="#">
+              <svg class="icon icon-facebook">
+                <use href="./assets/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contacts">
+        <h3 class="heading-contacts">Contact us</h3>
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <a
+              class="contacts-link"
+              href="https://www.google.com/maps/place/44%C2%B002'12.2%22N+123%C2%B007'31.7%22W/@44.0367104,-123.1280595,17z/data=!3m1!4b1!4m4!3m3!8m2!3d44.0367104!4d-123.1254846?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon icon-facebook">
+                <use href="./assets/sprite.svg#pin-alt"></use>
+              </svg>
+              <span>8558 Green Rd., LA</span>
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a class="contacts-link" href="tel:+375291234567">
+              <svg class="icon icon-facebook">
+                <use href="./assets/sprite.svg#phone"></use>
+              </svg>
+              <span>+1 (603) 555-0123</span>
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a class="contacts-link" href="">
+              <svg class="icon icon-facebook">
+                <use href="./assets/sprite.svg#clock"></use>
+              </svg>
+              <span>Mon–Sat: 9:00–23:00</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
