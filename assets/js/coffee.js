@@ -1,9 +1,11 @@
 import { switchTheme, restoreInputs } from "./theme.js";
+import { initBurger } from "./burger.js";
 
 const themesBlock = document.querySelector(".header-theme");
 const switchBlock = document.querySelector(".switch-block");
 
 restoreInputs();
+initBurger();
 
 themesBlock.addEventListener("change", (event) => {
   const currentTheme = event.target.value || "light";

@@ -5,6 +5,7 @@
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,8 +30,12 @@
   );
 }
 
+.nav-item-menu {
+  display: none;
+}
+
 .nav-item a {
-  display: block;
+  display: flex;
   font-size: 1rem;
   font-weight: 600;
   line-height: 150%;
@@ -103,6 +108,7 @@ input[type="radio"] {
 .link-menu {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 8px;
   font-weight: 600;
   line-height: 150%;
@@ -121,6 +127,11 @@ input[type="radio"] {
     width: 20px;
     height: 20px;
     --color-cup: var(--text-primary);
+  }
+
+  .burger-menu-cup {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -153,7 +164,11 @@ input[type="radio"] {
   left: 50%;
   transform: translateX(-50%);
   width: 16px;
+  height: 1px;
+  background-color: var(--text-primary);
   border: 1px solid var(--text-primary);
+
+  transition: 0.3s ease;
 }
 
 .burger-button::before {
@@ -161,7 +176,29 @@ input[type="radio"] {
 }
 
 .burger-button::after {
-  bottom: 17px;
+  top: 24px;
+}
+
+body.menu-open {
+  overflow: hidden;
+
+  main {
+    visibility: hidden;
+  }
+
+  .header-nav {
+    transform: translateX(0);
+  }
+
+  .burger-button::before {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .burger-button::after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 }
 
 /* Media */
@@ -191,6 +228,7 @@ input[type="radio"] {
     width: 44px;
     height: 40px;
   }
+
   .burger-button {
     display: block;
   }
@@ -199,13 +237,37 @@ input[type="radio"] {
     display: none;
   }
 
-  /* Adaptive burger menu */
+  .nav-item-menu {
+    display: flex;
+  }
+
   .header-nav {
-    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    transform: translateX(100%);
+    background-color: var(--bgc-page);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    transition: transform 0.3s ease;
   }
 
   .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 60px;
+  }
+
+  .nav-item a {
+    font-size: 2rem;
+    line-height: 125%;
   }
 
   .header-actions {

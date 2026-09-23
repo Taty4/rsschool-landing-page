@@ -1,4 +1,5 @@
 import { switchTheme, restoreInputs } from "./theme.js";
+import { initBurger } from "./burger.js";
 
 const themesBlock = document.querySelector(".header-theme");
 
@@ -9,3 +10,5 @@ themesBlock.addEventListener("change", (event) => {
 
   switchTheme(currentTheme);
 });
+
+initBurger();
