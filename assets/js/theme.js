@@ -1,6 +1,7 @@
 const STORAGE_KEY = `theme-taty4-kcnThs7`;
+const themesBlock = document.querySelector(".header-theme");
 
-export function switchTheme(currentTheme) {
+function switchTheme(currentTheme) {
   if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
   } else {
@@ -10,7 +11,7 @@ export function switchTheme(currentTheme) {
   localStorage.setItem(STORAGE_KEY, currentTheme);
 }
 
-export function restoreInputs() {
+function restoreInputs() {
   const currentTheme = localStorage.getItem(STORAGE_KEY) || "light";
   switchTheme(currentTheme);
 
@@ -18,4 +19,14 @@ export function restoreInputs() {
 
   const input = document.getElementById(inputId);
   input.checked = true;
+}
+
+export function initSwitchTheme() {
+  restoreInputs();
+
+  themesBlock.addEventListener("change", (event) => {
+    const currentTheme = event.target.value || "light";
+
+    switchTheme(currentTheme);
+  });
 }

@@ -125,8 +125,12 @@
   }
 }
 
-.button-refresh {
+.card.hidden {
   display: none;
+}
+
+.button-refresh {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
@@ -140,6 +144,191 @@
     height: 24px;
     stroke: var(--text-primary);
   }
+}
+
+.button-refresh.hidden {
+  display: none;
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 40px;
+  background-color: var(--bgc-overlay);
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--bgc-page);
+  border-radius: 40px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 20px;
+
+  scrollbar-width: none;
+}
+
+.modal-dialog::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.modal-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.modal-media img {
+  object-fit: cover;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+
+.modal-desc {
+  margin-top: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.field {
+  margin-top: 20px;
+}
+
+.field-label {
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 8px;
+  border-radius: 100px;
+  background-color: transparent;
+  font-weight: 600;
+  line-height: 150%;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  letter-spacing: 0;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.chip-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background-color: var(--border-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.chip.is-selected {
+  background-color: var(--bgc-container);
+  color: var(--text-inverse);
+  border-color: var(--bgc-container);
+}
+
+.chip.is-selected .chip-badge {
+  background-color: var(--text-inverse);
+  color: var(--bgc-container);
+  border-color: var(--text-inverse);
+}
+
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.total-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.note {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid var(--border-primary);
+  font-size: 10px;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.note .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.modal-close {
+  margin-top: 2px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 100px;
+  border: 1px solid var(--border-inverse);
+  background-color: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -160,6 +349,16 @@
       transform: scale(1);
     }
   }
+
+  .chip:hover {
+    border-color: var(--bgc-container);
+  }
+
+  .modal-close:hover {
+    background-color: var(--bgc-container);
+    color: var(--text-inverse);
+    border-color: var(--bgc-container);
+  }
 }
 
 @media (max-width: 768px) {
@@ -171,19 +370,26 @@
     );
   }
 
-  .card {
+  .button-refresh {
+    display: flex;
+  }
+
+  .modal {
+    padding-inline: clamp(
+      19px,
+      calc(19px + (40 - 19) * ((100vw - 380px) / (768 - 380))),
+      40px
+    );
+  }
+}
+
+@media (max-width: 680px) {
+  .modal-media {
     display: none;
   }
 
-  .card:nth-child(1),
-  .card:nth-child(2),
-  .card:nth-child(3),
-  .card:nth-child(4) {
-    display: flex;
-  }
-
-  .button-refresh {
-    display: flex;
+  .modal-dialog {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -37,7 +37,10 @@ export function initBurger() {
   });
 
   window.addEventListener("keydown", (event) => {
-    if (event.code === "Escape") {
+    if (
+      event.code === "Escape" &&
+      document.body.classList.contains("menu-open")
+    ) {
       closeMenu();
     }
   });

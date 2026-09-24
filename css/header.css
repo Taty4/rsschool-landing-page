@@ -182,10 +182,6 @@ input[type="radio"] {
 body.menu-open {
   overflow: hidden;
 
-  main {
-    visibility: hidden;
-  }
-
   .header-nav {
     transform: translateX(0);
   }
@@ -255,7 +251,9 @@ body.menu-open {
     align-items: center;
     z-index: 100;
 
-    transition: transform 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 1s;
   }
 
   .nav-list {
