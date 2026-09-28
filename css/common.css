@@ -84,6 +84,7 @@ img {
   --border-inverse: #c1b6ad;
 
   --logo-url: url("../assets/images/logo/logo-dark.png");
+  --bgc-overlay: #403f3dcc;
 }
 
 html {

@@ -30,6 +30,14 @@
           <li class="nav-item"><a href="#about">About</a></li>
           <li class="nav-item"><a href="#mobile-apps">Mobile app</a></li>
           <li class="nav-item"><a href="#footer">Contact us</a></li>
+          <li class="nav-item nav-item-menu">
+            <a class="link-menu nav-burger" href="./coffee.html"
+              >Menu
+              <svg class="icon burger-menu-cup">
+                <use href="./assets/sprite.svg#coffee-cup"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -97,20 +105,56 @@
               <use href="./assets/sprite.svg#slider-arrow-left"></use>
             </svg>
           </button>
-          <div class="slide">
-            <div class="slide-image">
-              <img
-                src="./assets/images/slider/coffee-slider-1.webp"
-                alt="S’mores Frappuccino"
-              />
-            </div>
-            <div class="slide-description">
-              <h3 class="coffee-title">S’mores Frappuccino</h3>
-              <p class="coffee-description">
-                This new drink takes an espresso and mixes it with brown sugar
-                and cinnamon before being topped with oat milk.
-              </p>
-              <p class="coffee-price">$5.50</p>
+          <div class="slider">
+            <div class="slider-track">
+              <div class="slide">
+                <div class="slide-image">
+                  <img
+                    src="./assets/images/slider/coffee-slider-1.webp"
+                    alt="S’mores Frappuccino"
+                  />
+                </div>
+                <div class="slide-description">
+                  <h3 class="coffee-title">S’mores Frappuccino</h3>
+                  <p class="coffee-description">
+                    This new drink takes an espresso and mixes it with brown
+                    sugar and cinnamon before being topped with oat milk.
+                  </p>
+                  <p class="coffee-price">$5.50</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-image">
+                  <img
+                    src="./assets/images/slider/coffee-slider-2.webp"
+                    alt="Caramel Macchiato"
+                  />
+                </div>
+                <div class="slide-description">
+                  <h3 class="coffee-title">Caramel Macchiato</h3>
+                  <p class="coffee-description">
+                    Fragrant and unique classic espresso with rich caramel-peanut syrup, 
+                    with cream under whipped thick foam 
+                  </p>
+                  <p class="coffee-price">$5.50</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-image">
+                  <img
+                    src="./assets/images/slider/coffee-slider-3.webp"
+                    alt="Ice coffee"
+                  />
+                </div>
+                <div class="slide-description">
+                  <h3 class="coffee-title">Ice coffee</h3>
+                  <p class="coffee-description">
+                    A popular summer drink that tones and invigorates. 
+                    Prepared from coffee, milk and ice. 
+                  </p>
+                  <p class="coffee-price">$5.50</p>
+                </div>
+              </div>
             </div>
           </div>
           <button class="slider-button slider-button-right">
@@ -120,9 +164,9 @@
           </button>
         </div>
         <div class="bullets-container">
-          <span class="bullet active"></span>
-          <span class="bullet"></span>
-          <span class="bullet"></span>
+          <span class="bullet active" data-index="1"></span>
+          <span class="bullet" data-index="2"></span>
+          <span class="bullet" data-index="3"></span>
         </div>
       </section>
       <section class="about-section" id="about">
